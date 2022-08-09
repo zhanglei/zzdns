@@ -1,0 +1,19 @@
+[package]
+name = "zcacher"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+zspeedtest = {path="../zspeedtest"}
+zupstream = {path="../zupstream"}
+zconfig = {path="../zconfig"}
+
+bytes = {version = "1.2.1"}
+tokio = { version = "1.21.2", default-features=false, features = ["macros", "rt-multi-thread", "sync", "net", "fs", "signal", "time"] }
+stretto = { version = "0.7.1", default-features=false, features = ["async"] }
+anyhow = {version="1.0.65"}
+async-channel = {version = "1.7.1"}
+domain = {version = "0.7.1", features = ["bytes"]}
+log = {version="0.4.17"}

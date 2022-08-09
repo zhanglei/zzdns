@@ -1,0 +1,12 @@
+[package]
+name = "zconfig"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+serde = {version="1.0.145", features = ["derive"]}
+serde_json = {version="1.0.85"}
+lazy_static = {version="1.4.0"}
+url = { version="2.3.1"}

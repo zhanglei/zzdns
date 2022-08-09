@@ -1,0 +1,59 @@
+[package]
+name = "zzdns"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+bench=false
+path="zzdns/main.rs"
+name="zzdns"
+
+[workspace]
+members=[
+    "zconfig",
+    "zqueue",
+    "zcacher",
+    "zresolver",
+    "zworker",
+    "zserver",
+    "zspeedtest",
+    "zupstream",
+    "zpreloader",
+]
+
+[profile.release]
+lto = true
+opt-level="z"
+codegen-units = 1
+panic = "abort"
+strip = true
+
+
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+zserver = { path = "./zserver" }
+zqueue = { path = "./zqueue"}
+zworker = { path = "./zworker" }
+zresolver = { path = "./zresolver"}
+zconfig = { path = "./zconfig"}
+zupstream = { path = "./zupstream"}
+zcacher = { path = "./zcacher"}
+zpreloader = { path = "./zpreloader"}
+
+serde = {version="1.0.145", features = ["derive"]}
+serde_json = {version="1.0.85"}
+lazy_static = {version="1.4.0"}
+url = { version="2.3.1"}
+bytes = {version = "1.2.1"}
+tokio = { version = "1.21.2", features = ["macros", "rt-multi-thread", "sync", "net", "fs", "signal", "time"] }
+stretto = { version = "0.7.1", features = ["async"] }
+anyhow = {version="1.0.65"}
+async-channel = {version = "1.7.1"}
+domain = {version = "0.7.1", features = ["bytes"]}
+log = {version="0.4.17"}
+async-trait = {version="0.1.57"}
+dyn-clone = {version = "1.0.9"}
+reqwest = {version = "0.11.12"}
+pretty_env_logger = { version = "0.4.0" }
