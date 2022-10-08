@@ -41,7 +41,7 @@ zconfig = { path = "./zconfig"}
 zupstream = { path = "./zupstream"}
 zcacher = { path = "./zcacher"}
 zpreloader = { path = "./zpreloader"}
-
+openssl = { version = "0.10", features = ["vendored"] }
 serde = {version="1.0.145", features = ["derive"]}
 serde_json = {version="1.0.85"}
 lazy_static = {version="1.4.0"}
