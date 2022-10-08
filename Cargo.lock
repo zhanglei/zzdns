@@ -1561,6 +1561,8 @@ dependencies = [
  "dyn-clone",
  "lazy_static",
  "log",
+ "openssl",
+ "openssl-sys",
  "pretty_env_logger",
  "reqwest",
  "serde",
