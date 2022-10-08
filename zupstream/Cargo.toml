@@ -15,4 +15,4 @@ bytes = {version = "1.2.1"}
 anyhow = {version="1.0.65"}
 domain = {version = "0.7.1", features = ["bytes"]}
 dyn-clone = {version = "1.0.9"}
-reqwest = {version = "0.11.12", features = ["json"]}
+reqwest = {version = "0.11.12"}
