@@ -60,8 +60,7 @@ jobs:
     - name: Install openssl
       if: matrix.os == 'ubuntu-latest'
       run: |
-        sudo apt-get install libxcb-render0-dev libxcb-shape0-dev libxcb-xfixes0-dev libspeechd-dev libxkbcommon-dev libssl-dev
-
+        sudo apt-get install pkg-config libssl-dev
 
     - name: Install Rust
       run: |
