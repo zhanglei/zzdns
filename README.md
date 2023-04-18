@@ -36,6 +36,14 @@
 
 ## 使用说明
 
+### 使用docker
+
+  - docker run方式: `docker run -it -e RUST_LOG=info -p 9053:53/udp classmatelin/zzdns`
+  - docker-compose: 见[lazy-docker](https://github.com/ClassmateLin/lazy-docker/blob/main/docker-compose.dns.yml)
+
+
+### 使用二进制包
+
 - [下载对应平台的二进制包](https://github.com/ClassmateLin/zzdns/releases), 使用命令`RUST_LOG=info ./zzdns`执行。
 
 - config/config.json是配置文件。
